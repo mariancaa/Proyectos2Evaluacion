@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/earrings.css">
+  <link rel="stylesheet" href="img/iconos/fonts.css">
+  <link rel="stylesheet" href="img/iconos/fonts2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="paginaInicio.html">ARUSKA</a>
+      </div>
+     
+      
+      <div class="nav-links">
+        <a href="shop.html">Shop</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Jewelry</button>
+          <div class="dropdown-content">
+            <a href="earrings.html"><p>☆ Earrings</p></a>
+            <a href="necklaces.html"><p>☆ Necklaces</p></a>
+            <a href="rings.html"><p>☆ Rings</p></a>
+            <a href="piercings.html"><p>☆ Piercings</p></a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div class="cart">
+        <a class="icon-bolsa_compra"></a>
+      </div>
+
+
+    </nav>
+  </header>
+  <div style="height:100px"></div>
+    
+
+
+ 
+
+<script>
+ let dropdownTimeout;
+
+document.querySelector('.dropdown').addEventListener('mouseenter', function () {
+  clearTimeout(dropdownTimeout);
+  document.querySelector('.dropdown-content').style.display = 'block';
+});
+
+document.querySelector('.dropdown').addEventListener('mouseleave', function () {
+  dropdownTimeout = setTimeout(function () {
+    document.querySelector('.dropdown-content').style.display = 'none';
+  }, 250);
+});
+</script>
+
+
+
+
+
+  
+       <footer>
+    <div class="footer-container">
+      <div class="upper-section">
+        <div class="logo-container">
+          LOGOARUSKA<!-- Aquí puedes insertar el logo de la tienda -->
+        </div>
+        <div class="right-section">
+          <div class="links">
+            <a href="#">SHIPPING & RETURNS</a>
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">CONTACT</a>
+            <a href="#">SIZE GUIDE</a>
+            <a href="#">CUSTOMER SUPPORT</a>
+          </div>
+          <div class="social-media">
+            <!-- Aquí puedes insertar el logo de Instagram -->
+          </div>
+        </div>
+      </div>
+      <hr class="separator">
+      <div class="lower-section">
+        <div class="left-section">
+          © 2024 ARUSKA. All rights reserved.
+        </div>
+        <div class="social-media-bottom">
+          <a href="instagram.com" class="icon-instagram_logo"></a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/orbit-controls-es6/1.3.0/OrbitControls.min.js"></script>
+  <script src="js/3d/3d.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js"></script>
+
+</body>
+
+</html>

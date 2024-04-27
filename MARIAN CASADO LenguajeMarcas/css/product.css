@@ -1,0 +1,32 @@
+.tipo{
+	font-family: 'Roboto', sans-serif;
+    display: block;
+    margin-bottom: 1px;
+}
+.nombre{
+	font-family: 'Barlow Semi Condensed', sans-serif;
+    display: block;
+    margin-bottom: 1px;
+}
+.precio{
+	font-family: 'Barlow Semi Condensed', sans-serif;
+    display: block;
+    margin-bottom: 1px;
+}
+.material{
+	font-family: 'Barlow Semi Condensed', sans-serif;
+    display: block;
+    margin-bottom: 1px;
+}
+option {
+	font-family: 'Roboto', sans-serif;
+    display: block;
+    margin-bottom: 1px;
+}
+.imagen-zoomable {
+  transition: transform 0.3s ease; 
+  transform-origin: 0 0; 
+}
+.imagen-zoomable:hover {
+  transform: scale(1.2); /* Cambia el tamaño de la imagen al 120% cuando el mouse está encima */
+}

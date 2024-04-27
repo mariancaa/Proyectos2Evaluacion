@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="img/iconos/fonts.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="img/iconos/iconos/corazon.css">
+    <link rel="stylesheet" href="img/iconos/fonts2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="paginaInicio.html">ARUSKA</a>
+      </div>
+      <div class="nav-links">
+        <a href="shop.html">Shop</a>
+        <div class="dropdown">
+          <button class="dropbtn">Jewelry</button>
+          <div class="dropdown-content">
+            <a href="earrings.html"><p>☆ Earrings</p></a>
+            <a href="necklaces.html"><p>☆ Necklaces</p></a>
+            <a href="rings.html"><p>☆ Rings</p></a>
+            <a href="piercings.html"><p>☆ Piercings</p></a>
+          </div>
+        </div>
+       <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div class="cart">
+        <a class="icon-bolsa_compra">
+        </a>
+      </div>
+    </nav>
+  </header>
+  <div style="height:200px"></div>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content: center; align-content: space-around; gap: 200px">
+    <div class="contenedor-imagen">
+      <img class="imagen-zoomable" id="imagenProducto" />
+    </div>
+    <div style="display:flex; flex-direction: column; gap: 10px;max-width: 300px;">
+      <h3 class="tipo" id="tipoProducto"></h3>
+      <h2 class="nombre" id="nombreProducto"></h2>
+      <h4 class="" id="nombreProducto" style="word-wrap: break-word; color: #ccc; font-family: 'Roboto', sans-serif; size: 12px;">Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Odio vitae possimus, dignissimos.</h4>
+      <h2 class="precio" id="precioProducto"></h2>
+      <br>
+
+      <form class="formulario" action="">
+        <label class="material">Material</label>
+        <select name="" id="materialSelect">
+          <option value="1">Oro 18k</option>
+          <option value="2">Oro 24k</option>
+          <option value="3">Chapado Oro 24k</option>
+          <option value="4">Plata</option>
+          <option value="5">Oro Blanco</option>
+        </select>
+<div style="display:flex; padding: 30px 0;">
+  <button id="añadir-bolsa" style="width: 150px;background-color: #444; color: #fff; border: none; padding: 10px 20px; cursor: pointer;font-family: 'Roboto',sans-serif; margin-right: 10px;">Añadir a la bolsa</button>
+  <button id="corazon" class="icon-heart-o" style="width: 150px;background-color: #444; color: #fff; border: none; padding: 10px 20px; cursor: pointer;"></button>
+</div>
+      </form>
+    </div>
+  </div>
+<div style="height:200px"></div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="upper-section">
+        <div class="logo-container">
+          LOGOARUSKA
+        </div>
+        <div class="right-section">
+          <div class="links">
+            <a href="#">SHIPPING & RETURNS</a>
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">CONTACT</a>
+            <a href="#">SIZE GUIDE</a>
+            <a href="#">CUSTOMER SUPPORT</a>
+          </div>
+        </div>
+      </div>
+      <hr class="separator">
+      <div class="lower-section">
+        <div class="left-section">
+          © 2024 ARUSKA. All rights reserved.
+        </div>
+        <div class="social-media-bottom">
+          <a href="instagram.com" class="icon-instagram_logo"></a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+ let dropdownTimeout;
+
+document.querySelector('.dropdown').addEventListener('mouseenter', function () {
+  clearTimeout(dropdownTimeout);
+  document.querySelector('.dropdown-content').style.display = 'block';
+});
+
+document.querySelector('.dropdown').addEventListener('mouseleave', function () {
+  dropdownTimeout = setTimeout(function () {
+    document.querySelector('.dropdown-content').style.display = 'none';
+  }, 250); 
+});
+</script>
+
+<script>
+  //Cogemos lo que viene por parametros y lo ponemos en una lista
+  //URLSearchParams nos convierte la ruta en una lista de parametros
+  const urlParams = new URLSearchParams(window.location.search);
+
+  //Guardamos los valores de la lista para usarlos en nuestros elementos
+  const imagen = urlParams.get('imagen');
+  const nombre = urlParams.get('nombre');
+  const precio = urlParams.get('precio');
+  const tipo = urlParams.get('tipo');
+
+  //Asignamos los valores previos a nuestros elementos
+  let imagenElement = document.querySelector("#imagenProducto");
+  imagenElement.src = imagen;
+  let nombreElement = document.querySelector("#nombreProducto");
+  nombreElement.innerHTML = nombre;
+  let precioElement = document.querySelector("#precioProducto");
+  precioElement.innerHTML = precio;
+  let tipoElement = document.querySelector("#tipoProducto");
+  tipoElement.innerHTML = tipo;
+</script>
+<script>
+    const botonCorazon = document.getElementById('corazon');
+    botonCorazon.addEventListener('click', function(event) {
+      event.preventDefault(); 
+        botonCorazon.classList.toggle('icon-heart-o');
+        botonCorazon.classList.toggle('icon-heart');
+    });
+</script>
+<script>
+     // Seleccionar el botón "Añadir a la bolsa"
+    const botonAñadirBolsa = document.getElementById('añadir-bolsa');
+
+    // Agregar un event listener para manejar el clic en el botón "Añadir a la bolsa"
+    botonAñadirBolsa.addEventListener('click', function(event) {
+        // Prevenir el comportamiento predeterminado del botón (evitar que la página se recargue)
+        event.preventDefault();
+
+        // Obtener el valor seleccionado del select
+        const materialSelect = document.getElementById("materialSelect");
+        const materialSeleccionado = materialSelect.options[materialSelect.selectedIndex].text;
+
+        // Obtener el nombre del producto
+        const nombreProducto = document.getElementById("nombreProducto").textContent;
+
+        // Mostrar el mensaje de alerta con el nombre del producto y el material seleccionado
+        alert("Se ha añadido " + nombreProducto + " en " + materialSeleccionado + " a su cesta");
+    });
+</script>
+<script>
+const contenedorImagen = document.querySelector('.contenedor-imagen');
+const imagenProducto = document.getElementById('imagenProducto');
+
+contenedorImagen.addEventListener('mousemove', function(event) {
+  const { left, top, width, height } = this.getBoundingClientRect();
+  const x = (event.pageX - left) / width;
+  const y = (event.pageY - top) / height;
+
+  // Ajusta el nivel de zoom aumentando el valor de escala
+  const zoomLevel = 1.5; // Puedes cambiar este valor según tus necesidades
+  imagenProducto.style.transform = `scale(${zoomLevel}) translate(-${x * (zoomLevel - 1) * 100}%, -${y * (zoomLevel - 1) * 100}%)`;
+
+  // Centra la imagen en el punto donde se encuentra el cursor
+  imagenProducto.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+});
+
+contenedorImagen.addEventListener('mouseleave', function() {
+  // Revertir la transformación aplicando la escala 1 y eliminando cualquier transformación de translación
+  imagenProducto.style.transform = 'scale(1) translate(0, 0)';
+  // Vuelve a establecer el punto de origen de la transformación a la esquina superior izquierda
+  imagenProducto.style.transformOrigin = '0 0';
+});
+</script>
+</body>
+</html>

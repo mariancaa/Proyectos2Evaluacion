@@ -1,0 +1,312 @@
+body {
+  font-family: 'Jaldi', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+header {
+  background-color: rgba(207, 183, 217, 0.5);
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  height:80px;
+  z-index: 5;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:100%;
+}
+
+.logo a {
+  display: block;
+  padding: 0px 13px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+}
+.logo_aruska{
+   display: inline-block;
+   position: relative;
+   block-size: 20px;
+  
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 20px;
+  height: 100%;
+  line-height: 50px;
+  padding: 0px 10px;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease; 
+}
+.nav-links a:hover::before {
+  width: 100%; 
+}
+
+.icon-bolsa_compra{
+  font-size: 22px;
+}
+
+.cart {
+  margin-right: 20px;
+}
+
+.cart img {
+  width: 30px; 
+  height: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 50px 200px; 
+}
+.grid-container figure {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 10px;
+
+}
+
+.grid-container img {
+ 
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.grid-container figure .hover-image {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grid-container figure:hover .hover-image {
+  opacity: 1;
+}
+
+
+figcaption .tipo,
+figcaption .precio {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  margin-bottom: 1px; 
+}
+.tipo{
+  font-size: 13.6;
+  color: rgba(0, 0, 0, 0.5);
+}
+.precio{
+  font-size: 14.4;
+}
+.nombre_producto{
+  display: inline-block;
+  color: rgba(0, 0, 0, 1.0);
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+    
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+  .nav-links {
+    display: none; /* Oculta los enlaces y el carrito */
+  }
+  
+  .logo {
+    flex: 1; /* Hace que el logo ocupe el espacio restante disponible */
+    text-align: center; /* Centra el texto dentro del contenedor */
+  }
+}
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+.dropbtn:hover + .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:hover .dropbtn {
+  display: block; 
+  transition-delay: 1.0s;
+}
+
+/* Estilos para el desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  font-family: 'Jaldi' ,sans-serif;
+  font-size: 20px;
+  background-color: rgba(207, 183, 217, 0.0);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  height:100%;
+  margin: 0px 20px;
+  padding: 0px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top:65px;
+  left: 0;
+  background-color: rgba(207, 183, 217, 0.5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: left;
+  transition: opacity 0.5s ease;
+  transition-delay: 5.0s;
+ 
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 0px;
+  margin: 4px 0px 4px 4px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  transition: color 0.3s ease; 
+}
+
+
+.dropdown-content a:hover {
+  background-color: rgba(207, 183, 217, 0.5); 
+  color: #fff;
+}
+
+
+.dropdown-content a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff; 
+  transition: width 0.3s ease; 
+}
+
+.nav-links a:hover,
+.cart a:hover,
+.dropdown button:hover {
+
+  color: #fff;
+}
+
+
+
+footer {
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.upper-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; 
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  color: rgb(255, 255, 255, 0.7);   
+  text-decoration: none; 
+  margin-right: 20px;
+}
+
+.links a:hover {
+  color: #fff;
+  text-decoration: none; 
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #fff; 
+  margin: 10px 0;
+}
+
+.lower-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.left-section {
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.icon-instagram_logo{
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.splide__slide img {
+  width:100vw;
+  height:auto;
+}
+
+
+
+
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/rings.css">
+  <link rel="stylesheet" href="img/iconos/fonts.css">
+  <link rel="stylesheet" href="img/iconos/fonts2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&family=Barrio&family=Bebas+Neue&family=Jaldi:wght@400;700&family=Open+Sans&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="paginaInicio.html">ARUSKA</a>
+      </div>
+     
+      
+      <div class="nav-links">
+        <a href="shop.html">Shop</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Jewelry</button>
+          <div class="dropdown-content">
+            <a href="earrings.html"><p>☆ Earrings</p></a>
+            <a href="necklaces.html"><p>☆ Necklaces</p></a>
+            <a href="rings.html"><p>☆ Rings</p></a>
+            <a href="piercings.html"><p>☆ Piercings</p></a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div class="cart">
+        <a class="icon-bolsa_compra"></a>
+      </div>
+
+    </nav>
+  </header>
+  <div style="height:100px"></div>
+  <div class="grid-container"><h1>Rings</h1></div>
+  <div class="grid-container">
+   
+    <figure onclick="irProducto(this)">
+        <img src="img/rings/1/1.png">
+        <img class="hover-image" src="img/rings/2/1.png">
+     
+      <figcaption>
+        <h2 class="nombre_producto">SOL BLANCO</h2>
+        <span class="tipo">Rings</span>
+        <span class="precio">55 €</span>
+      </figcaption>
+    </figure>
+    <figure onclick="irProducto(this)">
+        <img src="img/rings/1/2.png">
+        <img class="hover-image" src="img/rings/2/2.png">
+      <figcaption>
+        <h2 class="nombre_producto">SOL AZUL</h2>
+        <span class="tipo">Rings</span>
+        <span class="precio">55 €</span>
+      </figcaption>
+    </figure>
+   <figure onclick="irProducto(this)">
+        <img src="img/rings/1/3.png" alt="Imagen 1">
+        <img class="hover-image" src="img/rings/2/3.png">
+      <figcaption>
+        <h2 class="nombre_producto">SOL NARANJA</h2>
+        <span class="tipo">Rings</span>
+        <span class="precio">55 €</span>
+      </figcaption>
+    </figure>
+    <figure onclick="irProducto(this)">
+        <img src="img/rings/1/4.png" alt="Imagen 1">
+        <img class="hover-image" src="img/rings/2/4.png">
+      <figcaption>
+        <h2 class="nombre_producto">SOL CELESTE</h2>
+        <span class="tipo">Rings</span>
+        <span class="precio">55 €</span>
+      </figcaption>
+    </figure>
+    <figure onclick="irProducto(this)">
+        <img src="img/rings/1/5.png" alt="Imagen 1">
+        <img class="hover-image" src="img/rings/2/5.png">
+      <figcaption>
+        <h2 class="nombre_producto">VIRGENCITA</h2>
+        <span class="tipo">Rings</span>
+        <span class="precio">90 €</span>
+      </figcaption>
+    </figure>
+    <figure onclick="irProducto(this)">
+        <img src="img/rings/1/6.png" alt="Imagen 1">
+        <img class="hover-image" src="img/rings/2/6.png">
+      <figcaption>
+        <h2 class="nombre_producto">OJO</h2>
+        <span class="tipo">Rings</span>
+        <span class="precio">120 €</span>
+      </figcaption>
+    </figure>
+    
+
+        
+  </div>
+
+<script>
+ let dropdownTimeout;
+
+document.querySelector('.dropdown').addEventListener('mouseenter', function () {
+  clearTimeout(dropdownTimeout);
+  document.querySelector('.dropdown-content').style.display = 'block';
+});
+
+document.querySelector('.dropdown').addEventListener('mouseleave', function () {
+  dropdownTimeout = setTimeout(function () {
+    document.querySelector('.dropdown-content').style.display = 'none';
+  }, 250);
+});
+
+function irProducto(ele){
+  let imagenProducto = ele.children[0].src;
+  let nombreProducto = ele.children[2].children[0].innerHTML;
+  let precioProducto = ele.children[2].children[2].innerHTML;
+  let tipoProducto = ele.children[2].children[1].innerHTML;
+  window.location.href = "./product.html?imagen="+imagenProducto+"&nombre="+nombreProducto+"&precio="+precioProducto+"&tipo="+tipoProducto;
+}
+</script>
+
+
+  <div style="height:200px"></div>
+       <footer>
+    <div class="footer-container">
+      <div class="upper-section">
+        <div class="logo-container">
+          LOGOARUSKA<!-- Aquí puedes insertar el logo de la tienda -->
+        </div>
+        <div class="right-section">
+          <div class="links">
+            <a href="#">SHIPPING & RETURNS</a>
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">CONTACT</a>
+            <a href="#">SIZE GUIDE</a>
+            <a href="#">CUSTOMER SUPPORT</a>
+          </div>
+          <div class="social-media">
+            <!-- Aquí puedes insertar el logo de Instagram -->
+          </div>
+        </div>
+      </div>
+      <hr class="separator">
+      <div class="lower-section">
+        <div class="left-section">
+          © 2024 ARUSKA. All rights reserved.
+        </div>
+        <div class="social-media-bottom">
+          <a href="instagram.com" class="icon-instagram_logo"></a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #f2f2f2;
+	font-family: verdana;
+}
+main{
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+/*	float: left;*/
+
+}
+.fotos{
+	width: 100%;
+
+}
+.fotos img{
+	width: 100%;
+
+}
+.slidesjs-pagination{
+	background: #424242;
+	list-style: none;
+	overflow: hidden; //si algun elemento se ssale de la caja, lo esconde
+}
+.slidesjs-pagination li{
+	float: left;
+}
+.slidesjs-pagination li a{
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	display: block;
+	height: 22px;
+
+}
+.slidesjs-pagination li a:hover{
+	background: #000;
+}
+
+.fotos .active{ /* .active esta en el js */
+	background: #000;
+}
+.slidesjs-navigation{
+	background: #424242;
+	color: #fff;
+	text-decoration: none; /*quitar subrayado*/
+	padding: 10px 20px;
+	display: inline-block;/*no lo entiendo */
+	float: right;/*sigo sin entenderlo */
+	height: 22px;
+}
+.slidesjs-navigation:hover{
+	background: lightgreen;
+}
